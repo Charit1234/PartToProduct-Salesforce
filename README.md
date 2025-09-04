@@ -34,15 +34,19 @@ This project synchronizes custom **Part (SQX_Part__c)** records with standard **
    ```bash
    sfdx force:auth:web:login -a AssignmentOrg
 
-2. Deploy the source code
+2. Deploy the source code:
+   ```bash
    sfdx force:source:deploy -p force-app
 
-3. Assing the permission set
+3. Assing the permission set:
+   ```bash
    sfdx force:user:permset:assign -n CQ_Product_Admin -u AssignmentOrg
 
-4. Run unit tests
+4. Run unit tests:
+   ```bash
    sfdx force:apex:test:run --classnames PartToProductBatchTest --resultformat human --codecoverage --synchronous -u AssignmentOrg
 
-5. Schedule the daily job
+5. Schedule the daily job:
+   ```bash
    System.schedule('PartToProduct Daily Job', '0 0 6 * * ?', new PartToProductScheduler());
 
