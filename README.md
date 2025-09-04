@@ -3,7 +3,7 @@
 ## Overview
 This project synchronizes custom **Part (SQX_Part__c)** records with standard **Product2** records in Salesforce.
 
-- Runs daily at **6 AM GMT**
+- Runs daily at **6 AM IST**
 - Associates active parts with products
 - Creates new products if not found
 - Restricted to **System Administrators** or users with **CQ Product Admin** permission set
